@@ -1,0 +1,183 @@
+html, body{
+  height:100%;
+  width: 100%;
+  margin:0;
+  padding:0;
+  font-family: 'Dosis', sans-serif;
+  overflow: hidden;
+  letter-spacing: -1px;
+}
+
+#root, .App{
+  height:100%;
+}
+
+.wholepage{
+  background-color:#CBD9C7;
+  min-height:100%;
+  text-align: center;
+}
+
+
+.covidfigure{
+  width:800px;
+  height:800px;
+  opacity:0.6;
+  position:absolute;
+  left:100px;
+  top:0;
+  transform:scale(1,1);
+  animation:clockwise 20s linear infinite;
+  
+}
+
+/**the div containing the covid**/
+.figure{
+  width:100%;
+}
+
+.figure:hover{
+  transform: scale(1.1,1.1);
+  transition: all 1s;
+}
+
+.covidfigure:after{
+  content:"This is a virus";
+  color:#f2aeb4;
+  font-size: 2rem;
+  position:absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left:0;
+  right:0;
+  top:380px;
+}
+
+
+
+@keyframes clockwise{
+  from{
+    transform: rotateZ(0)  ;
+
+  }
+  to{
+    transform: rotateZ(359deg) ;
+
+  }
+}
+
+/**Config for the dashboard**/
+/**Whole column**/
+.contentcolumn{
+  position:absolute;
+  right:0;
+  padding:2%;
+  height:100%;
+}
+
+/**For the title**/
+.title{
+  margin:0;
+  font-weight: bold;
+  color:#44533E;
+  font-size: 4rem;
+  margin-bottom:1rem;
+}
+
+
+
+/**Make contents takes full height**/
+.content, .datacontent, .stats, .displaytab{
+  display:flex;
+  flex-direction: column;
+}
+.stats, .displayrow, .displaytitle, .displaycontent{
+  flex:1;
+}
+
+/**Styles for all contents**/
+.content{
+  background:linear-gradient(to bottom, #FFFFFF, #EBF6E8 );
+  opacity:0.9;
+  border-radius: 10px;
+  height:100%;
+  padding:20px 3% 5px 3%;
+}
+
+/**For the searchbar and stat content**/
+.datacontent{
+  margin:auto;
+  font-weight: bold;
+  letter-spacing: 0px;
+  flex:1;
+  width:100%;
+}
+
+/**For the search bar**/
+.searchbarconfig{
+  width: 100%;
+  margin:0 20px 10px 20px;
+}
+
+/**Each display tab content**/
+.displaytab{
+  background-color:#6D9E5D;
+  width: auto;
+  margin: 10px 20px;
+  color:#EBF6E8;
+  flex:1;
+  padding:2rem 0.1rem 2% 0.1rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  transition:all 0.5s;
+  height:150px;
+}
+
+.displaytab > .displaycontent{
+  font-size:3rem;
+  font-family: 'Spartan', sans-serif;
+  letter-spacing: -4px;
+  flex:1;
+}
+
+.displaytab > .displaytitle{
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+}
+
+/**animations**/
+.fade-appear{
+  opacity:0;
+  
+}
+
+.fade-appear.fade-appear-active{
+  opacity:1;
+  transition: opacity 1000ms linear;
+}
+
+.fade-enter{
+  opacity:0;
+  position:absolute;
+  z-index: 1;
+  left:0;
+  right:0;
+}
+
+.fade-enter.fade-enter-active{
+  opacity:1;
+  transition: opacity 500ms linear ;
+}
+.fade-exit{
+  opacity:1
+}
+
+.fade-exit.fade-exit-active{
+  opacity:0;
+  transition: opacity 500ms linear;
+}
+
+

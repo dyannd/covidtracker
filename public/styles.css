@@ -1,19 +1,20 @@
 html, body{
-  height:100%;
+  height:100vh;
+  min-height: 100vh;
   width: 100%;
   margin:0;
   padding:0;
-  font-family: 'Dosis', sans-serif;
-  overflow: hidden;
+  font-family: 'Mulish', sans-serif;
+  background-color:#B4DCC1;
   letter-spacing: -1px;
 }
 
 #root, .App{
-  height:100%;
+  min-height:100vh;
+  overflow:hidden;
 }
 
 .wholepage{
-  background-color:#CBD9C7;
   min-height:100%;
   text-align: center;
 }
@@ -44,13 +45,13 @@ html, body{
 .covidfigure:after{
   content:"This is a virus";
   color:#f2aeb4;
-  font-size: 2rem;
+  font-size: 1.5rem;
   position:absolute;
   margin-left: auto;
   margin-right: auto;
   left:0;
   right:0;
-  top:380px;
+  top:390px;
 }
 
 
@@ -73,85 +74,88 @@ html, body{
   right:0;
   padding:2%;
   height:100%;
+  width: 100%;
 }
 
 /**For the title**/
 .title{
-  margin:0;
+  margin:1rem auto;
   font-weight: bold;
-  color:#44533E;
+  color:#FFFFFF;
   font-size: 4rem;
-  margin-bottom:1rem;
 }
-
 
 
 /**Make contents takes full height**/
-.content, .datacontent, .stats, .displaytab{
-  display:flex;
-  flex-direction: column;
-}
-.stats, .displayrow, .displaytitle, .displaycontent{
-  flex:1;
-}
 
 /**Styles for all contents**/
 .content{
-  background:linear-gradient(to bottom, #FFFFFF, #EBF6E8 );
+  background:linear-gradient(to bottom, #59BE94, #9CD9B1 );
   opacity:0.9;
-  border-radius: 10px;
-  height:100%;
   padding:20px 3% 5px 3%;
+  min-height: 100%;
+  height: auto;
+  width: 100%;
 }
 
 /**For the searchbar and stat content**/
 .datacontent{
-  margin:auto;
-  font-weight: bold;
+  margin:0 auto;
+  font-weight:normal;
   letter-spacing: 0px;
-  flex:1;
   width:100%;
+  height: 100%;
 }
 
 /**For the search bar**/
 .searchbarconfig{
   width: 100%;
-  margin:0 20px 10px 20px;
+  margin:0 3%;
+}
+
+/**All display tabs**/
+.content-panels{
+  height: 100%;
+}
+
+.displaytab-wrapper{
+  padding:2% 3%;
 }
 
 /**Each display tab content**/
 .displaytab{
-  background-color:#6D9E5D;
-  width: auto;
-  margin: 10px 20px;
-  color:#EBF6E8;
-  flex:1;
-  padding:2rem 0.1rem 2% 0.1rem;
-  border-radius: 10px;
+  background-color:#B4DCC1;
+  color:#F27A5E;
+  padding:10% 3%;
   font-size: 1.2rem;
   font-weight: lighter;
   transition:all 0.5s;
-  height:150px;
+  height: 13rem;
 }
 
-.displaytab > .displaycontent{
-  font-size:3rem;
-  font-family: 'Spartan', sans-serif;
-  letter-spacing: -4px;
+.displaytab h1{
+  font-size:2.4rem;
+  font-weight: normal;
   flex:1;
 }
 
+.displaytab h2{
+  font-size: 1rem;
+  font-weight: normal;
+  flex:1;
+}
 .displaytab > .displaytitle{
   position:absolute;
-  bottom:0;
+  color:#085159;
+  bottom:1rem;
   left:0;
   right:0;
+  font-weight: bolder;
 }
 
 /**animations**/
 .fade-appear{
   opacity:0;
-  
 }
 
 .fade-appear.fade-appear-active{
@@ -179,5 +183,4 @@ html, body{
   opacity:0;
   transition: opacity 500ms linear;
 }
-
 
